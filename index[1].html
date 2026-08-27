@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend Web Developer Intern - Week 1 Task">
+    <title>Frontend Web Developer Intern | Week 1 Task</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <span>My Internships</span>
+                <i class="fa-solid fa-chevron-right"></i>
+                <strong>Tasks</strong>
+            </div>
+
+            <h1>
+                <i class="fa-solid fa-list-check"></i>
+                Frontend Web Developer Intern
+            </h1>
+
+            <div class="meta">
+                <span><i class="fa-regular fa-calendar"></i> Start: <strong>25-Aug-2026</strong></span>
+                <span><i class="fa-regular fa-calendar-check"></i> End: <strong>29-Sep-2026</strong></span>
+                <span><i class="fa-regular fa-clock"></i> Duration: <strong>5 Weeks</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="task-card">
+        <section class="task-details">
+            <div class="task-heading">
+                <div class="number">1</div>
+                <h2>Week 1 Task: Transforming Wireframes<br class="desktop-break"> into Static Web Pages</h2>
+            </div>
+
+            <div class="content">
+                <p><strong>Task Objective:</strong> The objective of this task is to convert a provided wireframe concept into a fully functional static web page using HTML and CSS. The intern will practice translating design mockups into code, ensuring the layout is pixel-perfect, and testing responsiveness on various screen sizes. This task will set the foundation for your development workflow and help you master the fundamentals of HTML structure and CSS styling.</p>
+
+                <h3>Expected Deliverables:</h3>
+                <ul>
+                    <li>A complete HTML file representing the static web page.</li>
+                    <li>A CSS file that accurately styles the webpage based on a provided design concept.</li>
+                    <li>A brief report (PDF or Markdown) explaining your design decisions, layout strategies, and any challenges encountered.</li>
+                </ul>
+
+                <h3>Key Steps:</h3>
+                <ul>
+                    <li>Analyze the wireframe design and identify key layout elements such as headers, navigation, content areas, and footers.</li>
+                    <li>Create a semantic HTML structure that reflects the design hierarchy, ensuring proper use of HTML tags.</li>
+                    <li>Implement CSS styling that mirrors the design, paying attention to color schemes, fonts, and spacing.</li>
+                    <li>Ensure the design is responsive by testing and adapting to multiple screen sizes using CSS media queries.</li>
+                    <li>Document your approach, the problems you encountered, and how you resolved them in a short report.</li>
+                </ul>
+
+                <p><strong>Evaluation Criteria:</strong> Your submission will be evaluated on the accuracy of the code in replicating the wireframe, adherence to semantic HTML practices, clarity of CSS organization, responsiveness of the design, and the quality of documentation regarding your design decisions. Creativity in solving layout challenges and depth of problem-solving explanation is highly valued.</p>
+            </div>
+        </section>
+
+        <section class="submission">
+            <div class="submission-inner">
+                <h2><i class="fa-solid fa-cloud-arrow-up"></i> Submit your work</h2>
+
+                <form>
+                    <div class="field">
+                        <label for="report">Upload your report file <span>(Word document only – .doc or .docx)</span></label>
+                        <div class="file-input">
+                            <button type="button" onclick="document.getElementById('report').click()">Browse...</button>
+                            <span id="file-name">No file selected.</span>
+                            <input id="report" type="file" accept=".doc,.docx" hidden>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="github">GitHub project URL <span>(optional)</span></label>
+                        <input id="github" type="url" placeholder="https://github.com/username/project">
+                    </div>
+
+                    <div class="notice">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <p>If your internship or task is <strong>technical or software related</strong>, sharing the GitHub URL of that project is <strong>compulsory</strong> – without it your certificate will not be issued. If your internship is non-technical, please ignore this field.</p>
+                    </div>
+
+                    <div class="field">
+                        <label for="description">Write description for the report <strong>(Minimum 200 words)</strong></label>
+                        <textarea id="description" rows="7" placeholder=""></textarea>
+                        <small>Please write a detailed description of the report you are submitting. This will help the evaluator understand your work better.</small>
+                    </div>
+
+                    <button class="submit-btn" type="submit">
+                        <i class="fa-solid fa-paper-plane"></i> Submit
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const reportInput = document.getElementById('report');
+        const fileName = document.getElementById('file-name');
+
+        reportInput.addEventListener('change', () => {
+            fileName.textContent = reportInput.files.length
+                ? reportInput.files[0].name
+                : 'No file selected.';
+        });
+    </script>
+</body>
+</html>
